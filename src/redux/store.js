@@ -1,13 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import contactsReducer from "./contactsSlice";
-import filtersReducer from "./filtersSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import contactsReducer from './contactsSlice';
+import filtersReducer from './filtersSlice';
 
 const contactsPersistConfig = {
-  key: "contacts",
+  key: 'contacts',
   storage,
-  whitelist: ["items"],
+  whitelist: ['items'],
 };
 
 export const store = configureStore({
@@ -18,8 +18,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        // Ігноруємо перевірку сериалізації для екшенів Redux Persist
-        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
+        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
       },
     }),
 });
