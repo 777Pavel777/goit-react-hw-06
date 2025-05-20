@@ -1,24 +1,26 @@
 .container {
   display: flex;
-  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
   margin-bottom: 24px;
 }
 
 label {
   display: block;
   margin-bottom: 8px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #2a2a2a;
+  color: #fff;
 }
 
 .input {
-  width: 100%;
+  width: 94%;
   padding: 12px;
   border: 1px solid #d1d1d1;
   border-radius: 4px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: #2a2a2a;
   outline: none;
